@@ -16,12 +16,14 @@ category: arch-linux
     - 命令行
 
         > $ echo mem \| sudo tee /sys/power/state
+        > or
+        > $ systemctl suspend
+        > or
+        > $ xautolock -time 1 -locker "slock"
+        > $ xautolock -time 2 -locker "systemctl suspend"
+
 
     - 无操作时自动休眠
         > $ sudo vi /etc/systemd/logind.conf  
         > IdleAction=suspend  
         > IdleActionSec=1min  
-    
-    - 
-
-
